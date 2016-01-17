@@ -193,6 +193,4 @@ service navl_server /system/bin/navd --android_log NAVD  -p3 -nav\"-c/system/etc
     disabled
     oneshot
 
-service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
-    class late_start
 
