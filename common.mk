@@ -5,6 +5,9 @@ $(call inherit-product, $(COMMON_FOLDER)/common.mk)
 
 DEVICE_PACKAGE_OVERLAYS += $(BOWSER_COMMON_FOLDER)/overlay/aosp
 
+# USB Host app switcher
+PRODUCT_PACKAGES += USBHostSwitcher
+
 # Hardware HALs
 PRODUCT_PACKAGES += \
     lights.bowser \
