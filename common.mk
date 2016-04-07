@@ -65,5 +65,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(BOWSER_COMMON_FOLDER)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
+# Prebuilts camera
+PRODUCT_COPY_FILES += \
+	$(BOWSER_COMMON_FOLDER)/prebuilt/bin/execmod-wrapper.sh:/vendor/bin/camera_dcc.sh
+
 $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
 $(call inherit-product-if-exists, vendor/amazon/bowser-common/bowser-common-vendor.mk)
