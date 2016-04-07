@@ -105,7 +105,7 @@ on boot
     mkdir /data/lbs 0771 system system
     chown /data/lbs system system
 
-service camera_dcc /vendor/bin/camera_dcc
+service camera_dcc /vendor/bin/camera_dcc.sh
     class core
     user root
     group root
