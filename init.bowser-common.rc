@@ -110,7 +110,7 @@ service camera_dcc /system/vendor/bin/camera_dcc.sh
     user root
     group root
     oneshot
-    seclabel u:r:camera_dcc:s0 
+    seclabel u:r:cameradcc:s0 
 
 service hciattach /system/bin/brcm_patchram_plus --tosleep 100000 --no2bytes --scopcm=0,4,0,1,1,1,0,3,3,1 --enable_lpm --enable_h4 --bcm2076_auto --baudrate 3692000 /dev/ttyO1
     class main
