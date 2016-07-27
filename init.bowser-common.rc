@@ -67,9 +67,12 @@ on post-fs-data
     mkdir /data/media 0770 media_rw media_rw
     chown media_rw media_rw /data/media
 
+    # mount system ro
+    mount ext4 /dev/block/platform/omap/omap_hsmmc.1/by-name/system /system rw remount
+
     # camera calibration - DCC folder permission
-    mkdir /data/misc/camera 0700 media media
-    mkdir /data/misc/camera/R01_MVEN002_LD0_ND0_IR0_SH0_FL0_SVEN002_DCCID46 0700 media media
+    #mkdir /data/misc/camera 0700 media media
+    #mkdir /data/misc/camera/R01_MVEN002_LD0_ND0_IR0_SH0_FL0_SVEN002_DCCID46 0700 media media
 
     mkdir /data/smc 0770 drmrpc drmrpc
     chown drmrpc drmrpc /data/smc/counter.bin
@@ -115,7 +118,7 @@ service hciattach /system/bin/brcm_patchram_plus --tosleep 100000 --no2bytes --s
     class main
     user bluetooth
     group bluetooth net_bt_admin
-    disabled
+    #disabled
     oneshot
 
 #service p2p_supplicant /system/bin/wpa_supplicant \
@@ -175,7 +178,7 @@ service iprenew_bnep0 /system/bin/dhcpcd -n
     oneshot
 
 service battery_log /system/bin/battery_log.sh
-    disabled
+    #disabled
     oneshot
 
 service temperature_log /system/bin/temperature_log.sh
@@ -190,7 +193,7 @@ service thermal_setup /system/bin/thermal_setup.sh
 
 service navl_server /system/bin/navd --android_log NAVD  -p3 -nav\"-c/system/etc/gps/config/pathconfigfile.txt\"
     class main
-    disabled
+    #disabled
     oneshot
 
 
