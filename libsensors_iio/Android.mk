@@ -61,11 +61,7 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/software/core/mllite/linux
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/software/core/driver/include
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/software/core/driver/include/linux
 
-LOCAL_SHARED_LIBRARIES := liblog
-LOCAL_SHARED_LIBRARIES += libcutils
-LOCAL_SHARED_LIBRARIES += libutils
-LOCAL_SHARED_LIBRARIES += libdl
-LOCAL_SHARED_LIBRARIES += libmllite
+LOCAL_SHARED_LIBRARIES := liblog libcutils libutils libdl libmllite
 
 # Additions for SysPed
 LOCAL_SHARED_LIBRARIES += libmplmpu
