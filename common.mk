@@ -15,7 +15,7 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default
 
 # Device settings
-ADDITIONAL_BUILD_PROPERTIES += \
+PRODUCT_PROPERTY_OVERRIDES += \
     persist.demo.hdmirotationlock=true \
     persist.lab126.touchnoisereject=1 \
     ro.nf.profile=2 \
