@@ -93,8 +93,6 @@ BOARD_EGL_WORKAROUND_BUG_10194508 := true
 # Misc.
 BOARD_NEEDS_CUTILS_LOGS := true
 BOARD_HARDWARE_CLASS += $(OMAP4_NEXT_FOLDER)/cmhw
-BOARD_SEPOLICY_DIRS += \
-    $(OMAP4_NEXT_FOLDER)/sepolicy
 
 # Recovery
 TARGET_RECOVERY_PRE_COMMAND := "echo 0 > /sys/block/mmcblk0boot0/force_ro; echo -n 7 | dd of=/dev/block/mmcblk0boot0 bs=1 count=1 seek=4104 ; sync; \#"
